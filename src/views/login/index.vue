@@ -7,8 +7,8 @@
       </div>
       <div class="login-form">
         <div class="login-logo">
-          <img class="login-icon" src="@/assets/images/logo.svg" alt="" />
-          <h2 class="logo-text">Sz-Admin</h2>
+          <img class="login-icon" src="@/assets/icons/amarsoft.svg" alt="" />
+          <h2 class="logo-text">支持中心</h2>
         </div>
         <LoginForm />
       </div>

@@ -39,7 +39,7 @@
     </el-button>
   </div>
   <div v-if="isPreview()" style="margin-top: 20px; color: var(--el-color-warning)">
-    <span>如无法登陆请联系作者：feiyuchuixue@163.com</span>
+    <span>如无法登陆请联系支持中心：support@amarsoft.com</span>
   </div>
 </template>
 
@@ -71,8 +71,8 @@ const loginRules = reactive({
 
 const loading = ref(false)
 const loginForm = reactive({
-  username: '',
-  password: '',
+  username: 'admin',
+  password: 'sz123456',
   clientId: '',
   grantType: ''
 })
