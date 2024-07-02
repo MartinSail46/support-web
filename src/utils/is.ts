@@ -117,6 +117,10 @@ export function isNullOrUnDef(val: unknown): val is null | undefined {
   return isUnDef(val) || isNull(val)
 }
 
+export function hasText(val: String) {
+  return val !== null && val !== undefined && val !== 'undefined' && val !== ''
+}
+
 /**
  * @description: 是否为 16 进制颜色
  */
