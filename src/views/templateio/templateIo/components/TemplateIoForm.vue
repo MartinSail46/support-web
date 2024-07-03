@@ -21,12 +21,15 @@
           clearable
         ></el-input>
       </el-form-item>
-      <el-form-item label="设备" prop="device">
+      <el-form-item label="关联的模版名称" prop="templateName">
         <el-input
-          v-model="paramsProps.row.device"
-          placeholder="请填写设备"
+          v-model="paramsProps.row.templateName"
+          placeholder="请填写关联的模版名称"
           clearable
         ></el-input>
+      </el-form-item>
+      <el-form-item label="设备" prop="device">
+        <el-input v-model="paramsProps.row.device" placeholder="请填写设备" clearable></el-input>
       </el-form-item>
       <el-form-item label="每秒事务处理量" prop="tps">
         <el-input
@@ -64,8 +67,7 @@
         ></el-input>
       </el-form-item>
       <el-form-item label="乐观锁" prop="revision">
-        <el-input-number
-          v-model="paramsProps.row.revision" :precision="0" :min="1" :max="999999" />
+        <el-input-number v-model="paramsProps.row.revision" :precision="0" :min="1" :max="999999" />
       </el-form-item>
       <el-form-item label="创建人" prop="createdId">
         <el-input
@@ -75,11 +77,13 @@
         ></el-input>
       </el-form-item>
       <el-form-item label="创建时间" prop="createdTime">
-        <el-date-picker clearable
+        <el-date-picker
+          clearable
           v-model="paramsProps.row.createdTime"
           type="datetime"
           value-format="YYYY-MM-DD HH:mm:ss"
-          placeholder="请选择创建时间">
+          placeholder="请选择创建时间"
+        >
         </el-date-picker>
       </el-form-item>
       <el-form-item label="更新人" prop="updatedId">
@@ -90,11 +94,13 @@
         ></el-input>
       </el-form-item>
       <el-form-item label="更新时间" prop="updatedTime">
-        <el-date-picker clearable
+        <el-date-picker
+          clearable
           v-model="paramsProps.row.updatedTime"
           type="datetime"
           value-format="YYYY-MM-DD HH:mm:ss"
-          placeholder="请选择更新时间">
+          placeholder="请选择更新时间"
+        >
         </el-date-picker>
       </el-form-item>
     </el-form>
@@ -110,15 +116,14 @@ import { ref, reactive } from 'vue'
 import { type ElForm, ElMessage } from 'element-plus'
 
 defineOptions({
-    name: 'TemplateIoForm'
+  name: 'TemplateIoForm'
 })
-
 
 const rules = reactive({
   templateId: [{ required: true, message: '请填写关联的模版ID' }],
   delFlag: [{ required: true, message: '请填写删除标识' }],
   revision: [{ required: true, message: '请填写乐观锁' }],
-  createdTime: [{ required: true, message: '请填写创建时间' }],
+  createdTime: [{ required: true, message: '请填写创建时间' }]
 })
 
 const visible = ref(false)

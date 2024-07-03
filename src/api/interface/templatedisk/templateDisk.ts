@@ -5,6 +5,7 @@ export namespace ITemplateDisk {
   // 查询条件
   export interface Query extends IPageQuery {
     templateId?: string
+    templateName?: string
     fileSystem?: string
     size?: string
     used?: string
@@ -22,6 +23,7 @@ export namespace ITemplateDisk {
   export interface Form {
     id?: number
     templateId?: string
+    templateName?: string
     fileSystem?: string
     size?: string
     used?: string
@@ -39,6 +41,7 @@ export namespace ITemplateDisk {
   export interface Row {
     id?: number
     templateId?: string
+    templateName?: string
     fileSystem?: string
     size?: string
     used?: string

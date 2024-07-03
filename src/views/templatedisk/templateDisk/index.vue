@@ -107,18 +107,19 @@ const proTableRef = ref<ProTableInstance>();
 // 表格配置项
 const columns: ColumnProps<ITemplateDisk.Row>[] = [
   { type: 'selection', width: 80 },
-  { prop: 'templateId', label: '关联的模版ID' },
+  // { prop: 'templateId', label: '关联的模版ID' },
+  { prop: 'templateName', label: '关联的模版名称' },
   { prop: 'fileSystem', label: '文件系统' },
   { prop: 'size', label: '大小' },
   { prop: 'used', label: '已用' },
   { prop: 'available', label: '可用' },
   { prop: 'usedPercentage', label: '已用（百分比）' },
   { prop: 'mountPoint', label: '挂载点' },
-  { prop: 'revision', label: '乐观锁' },
-  { prop: 'createdId', label: '创建人' },
-  { prop: 'createdTime', label: '创建时间' },
-  { prop: 'updatedId', label: '更新人' },
-  { prop: 'updatedTime', label: '更新时间' },
+  // { prop: 'revision', label: '乐观锁' },
+  // { prop: 'createdId', label: '创建人' },
+  // { prop: 'createdTime', label: '创建时间' },
+  // { prop: 'updatedId', label: '更新人' },
+  // { prop: 'updatedTime', label: '更新时间' },
   { prop: 'operation', label: '操作', width: 250, fixed: 'right' }
 ]
 // 搜索条件项
@@ -129,7 +130,7 @@ const searchColumns: SearchProps[] = [
   { prop: 'used', label: '已用', el: 'input' },
   { prop: 'available', label: '可用', el: 'input' },
   { prop: 'usedPercentage', label: '已用（百分比）', el: 'input' },
-  { prop: 'mountPoint', label: '挂载点', el: 'input' },
+  // { prop: 'mountPoint', label: '挂载点', el: 'input' },
   { prop: 'revision', label: '乐观锁', el: 'input' },
   { prop: 'createdId', label: '创建人', el: 'input' },
   { prop: 'createdTime',

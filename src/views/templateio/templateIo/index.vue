@@ -107,18 +107,19 @@ const proTableRef = ref<ProTableInstance>();
 // 表格配置项
 const columns: ColumnProps<ITemplateIo.Row>[] = [
   { type: 'selection', width: 80 },
-  { prop: 'templateId', label: '关联的模版ID' },
+  // { prop: 'templateId', label: '关联的模版ID' },
+  { prop: 'templateName', label: '关联的模版名称' },
   { prop: 'device', label: '设备' },
   { prop: 'tps', label: '每秒事务处理量' },
   { prop: 'kbReadS', label: '每秒从设备读取的数据（KB）' },
   { prop: 'kbWriteS', label: '每秒从设备写入的数据（KB）' },
   { prop: 'kbRead', label: '读取的总数据量' },
   { prop: 'kbWrite', label: '写入的总数据量' },
-  { prop: 'revision', label: '乐观锁' },
-  { prop: 'createdId', label: '创建人' },
-  { prop: 'createdTime', label: '创建时间' },
-  { prop: 'updatedId', label: '更新人' },
-  { prop: 'updatedTime', label: '更新时间' },
+  // { prop: 'revision', label: '乐观锁' },
+  // { prop: 'createdId', label: '创建人' },
+  // { prop: 'createdTime', label: '创建时间' },
+  // { prop: 'updatedId', label: '更新人' },
+  // { prop: 'updatedTime', label: '更新时间' },
   { prop: 'operation', label: '操作', width: 250, fixed: 'right' }
 ]
 // 搜索条件项

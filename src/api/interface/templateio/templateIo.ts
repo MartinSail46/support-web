@@ -5,6 +5,7 @@ export namespace ITemplateIo {
   // 查询条件
   export interface Query extends IPageQuery {
     templateId?: string
+    templateName?: string
     device?: string
     tps?: string
     kbReadS?: string
@@ -22,6 +23,7 @@ export namespace ITemplateIo {
   export interface Form {
     id?: number
     templateId?: string
+    templateName?: string
     device?: string
     tps?: string
     kbReadS?: string
@@ -39,6 +41,7 @@ export namespace ITemplateIo {
   export interface Row {
     id?: number
     templateId?: string
+    templateName?: string
     device?: string
     tps?: string
     kbReadS?: string
